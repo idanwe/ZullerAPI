@@ -12,4 +12,6 @@ exports.routes = [
   { method: "GET", path: "/{path*}", handler: getAllFiles },
   { method: "GET", path: "/bars", config: Bars.get },
   { method: "POST", path: "/bars", config: Bars.post },
+  { method: "PUT", path: "/bars/{id}", config: Bars.put },
+  { method: "DELETE", path: "/bars/{id}", config: Bars.delete },
 ]
