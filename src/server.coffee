@@ -3,12 +3,8 @@ Mongo = require "mongodb"
 Routes = require "./routes"
 
 defaults =
-  # dbUri: "ADD HERE yout MongoDB development url. mongodb://127.0.0.1:27017/Bolierplate"
-  dbUri: "mongodb://127.0.0.1:27017/Zuller"
+  dbUri: process.env.MONGOHQ_URL or "mongodb://127.0.0.1:27017/Zuller"
   port: +process.env.PORT or 8000
-
-if process.env.NODE_ENV is "production"
-  defaults.dbUri = process.env.MONGOHQ_URL
 
 Routes.options = defaults
 
