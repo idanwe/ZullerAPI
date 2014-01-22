@@ -3,6 +3,7 @@ Hapi = require "hapi"
 S = Hapi.types.String
 A = Hapi.types.Array
 N = Hapi.types.Number
+O = Hapi.types.Object
 
 exports.get =
   description: "GET /bars"
@@ -16,14 +17,19 @@ exports.post =
     payload:
       name: S().required()
       address: S()
-      lng: N()
-      lat: N()
+      location:
+        lng: N()
+        lat: N()
+      openingHours:
+        start: S()
+        end: S()
       age: N().min(0).max(100)
       phoneNumber: S()
       description: S()
       images: A()
       webSite: S()
       facebook: S()
+      mail: S()
   handler: (request, reply) ->
     now = new Date
     request.payload.createdAt = now

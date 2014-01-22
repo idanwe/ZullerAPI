@@ -6,7 +6,7 @@ exports.__defineSetter__ "options", (value) ->
 exports.__defineGetter__ "options", ->
   options
 
-getAllFiles = directory: { path: "../app" }
+getAllFiles = directory: { path: "app" }
 
 exports.routes = [
   { method: "GET", path: "/{path*}", handler: getAllFiles },
