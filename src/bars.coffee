@@ -8,7 +8,7 @@ exports.get =
   description: "GET /bars"
   handler: (request, reply) ->
     getCollection (err, collection) ->
-      collection.find {}, (err, bars) ->
+      collection.find().toArray (err, bars) ->
         reply bars
 
 exports.post =
