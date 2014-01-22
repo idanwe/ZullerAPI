@@ -18,18 +18,20 @@ exports.post =
       name: S().required()
       address: S()
       location:
-        lng: N()
         lat: N()
+        lng: N()
       openingHours:
-        start: S()
-        end: S()
+        from: S()
+        until: S()
       age: N().min(0).max(100)
       phoneNumber: S()
-      description: S()
-      images: A()
-      webSite: S()
       facebook: S()
-      mail: S()
+      webSite: S()
+      email: S()
+      description: S()
+      iconImage: S()
+      logoImage: S()
+      images: A()
   handler: (request, reply) ->
     now = new Date
     request.payload.createdAt = now
