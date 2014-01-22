@@ -1,0 +1,33 @@
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand pull-left" href="#">Zuller</a>
+  </div>
+</div>
+
+<div class="container">
+  <button type="button" ng-click="addBar()" class="btn btn-primary">Add Bar</button>
+
+  <div class="bars">
+    <table class="table table-hover" cg-busy="{tracker:'getBars'}">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="bar in bars | orderBy:'date'">
+            <td>{{bar.name}}</td>
+            <td>{{bar.address}}</td>
+            <td>
+              <a href="" ng-click="showBar(bar)">show</a>
+              |
+              <a href="" ng-click="deleteBar(bar)">delete</a>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+
+</div>
