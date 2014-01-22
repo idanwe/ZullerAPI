@@ -8,7 +8,7 @@ defaults =
   port: +process.env.PORT or 8000
 
 if process.env.NODE_ENV is "production"
-  defaults.dbUri = "ADD HERE your MongoDB production url"
+  defaults.dbUri = "mongodb://idanwe:Ermfrt0601@troup.mongohq.com:10030/app21476531"
 
 Routes.options = defaults
 
