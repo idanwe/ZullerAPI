@@ -1,7 +1,6 @@
 {
   "name": "ZullerAdmin",
   "version": "0.0.0",
-  "directory": "app/bower_components",
   "dependencies": {
     "angular": "1.2.0",
     "angular-route": "1.2.0",
